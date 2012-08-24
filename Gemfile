@@ -5,14 +5,23 @@ gem 'rails', '3.2.2'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-group :development do
+group :development, :test do
   gem 'mysql2'
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+  gem 'simplecov', :require => false
 end
 
-group :development, :test do
-  gem 'rspec-rails'
+group :test do
   gem 'capybara'
-  gem 'simplecov', :require => false
+  gem 'rb-fsevent', '0.9.1', :require => false
+  gem 'growl'
+  gem 'guard-spork', '0.3.2'
+  gem 'spork', '0.9.0'
+end
+
+group :production do
+  gem 'pg', '0.12.2'
 end
 
 # Gems used only for assets and not required
@@ -29,9 +38,6 @@ end
 
 gem 'jquery-rails'
 
-group :production do
-  gem 'pg', '0.12.2'
-end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
