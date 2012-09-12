@@ -7,12 +7,16 @@ gem 'rails', '3.2.2'
 
 gem 'bootstrap-sass'
 
+gem 'bcrypt-ruby'
+
 group :development, :test do
   gem 'mysql2'
   gem 'rspec-rails'
   gem 'guard-rspec'
   gem 'simplecov', :require => false
 end
+
+gem 'annotate', :group => :development
 
 group :test do
   gem 'capybara'
