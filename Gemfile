@@ -12,6 +12,10 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'guard-rspec'
   gem 'simplecov', :require => false
+
+  # To use debugger
+  gem	'ruby-debug-base19', "0.11.26"
+  gem 'ruby-debug19', :require => 'ruby-debug'
 end
 
 gem 'annotate', :group => :development
@@ -57,6 +61,3 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # Deploy with Capistrano
 # gem 'capistrano'
 
-# To use debugger
-gem	'ruby-debug-base19', "0.11.26"
-gem 'ruby-debug19', :require => 'ruby-debug'
