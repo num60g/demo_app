@@ -17,12 +17,14 @@ end
 gem 'annotate', :group => :development
 
 group :test do
-  gem 'capybara'
+  gem 'capybara', '1.1.2'
   gem 'rb-fsevent', '0.9.1', :require => false
   gem 'growl'
   gem 'guard-spork', '0.3.2'
   gem 'spork', '0.9.0'
   gem 'factory_girl_rails', '1.4.0'
+  gem 'cucumber-rails', '1.2.1', :require => false
+  gem 'database_cleaner', '0.7.0'
 end
 
 group :production do
@@ -56,4 +58,5 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
+gem	'ruby-debug-base19', "0.11.26"
+gem 'ruby-debug19', :require => 'ruby-debug'
