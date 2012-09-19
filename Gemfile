@@ -7,8 +7,6 @@ gem 'rails', '3.2.2'
 
 gem 'bootstrap-sass'
 
-gem 'bcrypt-ruby'
-
 group :development, :test do
   gem 'mysql2'
   gem 'rspec-rails'
@@ -24,6 +22,7 @@ group :test do
   gem 'growl'
   gem 'guard-spork', '0.3.2'
   gem 'spork', '0.9.0'
+  gem 'factory_girl_rails', '1.4.0'
 end
 
 group :production do
@@ -44,9 +43,8 @@ end
 
 gem 'jquery-rails'
 
-
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
