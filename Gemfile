@@ -7,6 +7,13 @@ gem 'rails', '3.2.2'
 
 gem 'bootstrap-sass'
 
+# To use ActiveModel has_secure_password
+gem 'bcrypt-ruby', '~> 3.0.0'
+
+gem 'faker', '1.0.1'
+gem 'will_paginate', '3.0.3'
+gem 'bootstrap-will_paginate', '0.0.6'
+
 group :development, :test do
   gem 'mysql2'
   gem 'rspec-rails'
@@ -26,7 +33,7 @@ group :test do
   gem 'growl'
   gem 'guard-spork', '0.3.2'
   gem 'spork', '0.9.0'
-  gem 'factory_girl_rails', '1.4.0'
+  gem 'factory_girl_rails', '~> 4.0'
   gem 'cucumber-rails', '1.2.1', :require => false
   gem 'database_cleaner', '0.7.0'
 end
@@ -49,8 +56,6 @@ end
 
 gem 'jquery-rails'
 
-# To use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
