@@ -68,11 +68,11 @@ describe "AuthenticationPages" do
             page.should have_selector('title', text: 'Edit user')
           end
           
-          describe "when signing in again" do
+          describe "and when signing in again" do
             before do
               visit signin_path
               fill_in "Email", with: user.email
-              fill_in "Password", with: user.email
+              fill_in "Password", with: user.password
               click_button "Sign in"
             end
             
@@ -80,6 +80,7 @@ describe "AuthenticationPages" do
               page.should have_selector('title', text: user.name)
             end
           end
+          
         end
       end
       
@@ -99,7 +100,9 @@ describe "AuthenticationPages" do
           it { should have_selector('title', text: 'Sign in') }
         end
       end
+      
     end
+    
   end
   
   describe "as wrong user" do
