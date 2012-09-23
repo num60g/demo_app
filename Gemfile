@@ -1,24 +1,26 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.2'
-
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-gem 'bootstrap-sass'
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
 
+gem 'bootstrap-sass'
 gem 'faker', '1.0.1'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
+gem 'jquery-rails'
 
 group :development, :test do
   gem 'mysql2'
   gem 'rspec-rails'
   gem 'guard-rspec'
-  gem 'simplecov', :require => false
+  gem 'guard-spork', '0.3.2'
+  gem 'spork', '0.9.0'
+
+#  gem 'simplecov', :require => false
 
   # To use debugger
   gem	'ruby-debug-base19', "0.11.26"
@@ -29,13 +31,13 @@ gem 'annotate', :group => :development
 
 group :test do
   gem 'capybara', '1.1.2'
-  gem 'rb-fsevent', '0.9.1', :require => false
-  gem 'growl'
-  gem 'guard-spork', '0.3.2'
-  gem 'spork', '0.9.0'
   gem 'factory_girl_rails', '~> 4.0'
   gem 'cucumber-rails', '1.2.1', :require => false
   gem 'database_cleaner', '0.7.0'
+  
+#  gem 'launchy', '2.1.0'   # use with Capybara. save_and_open_page method
+  gem 'rb-fsevent', '0.9.1', :require => false
+  gem 'growl'
 end
 
 group :production do
@@ -53,8 +55,6 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
-
-gem 'jquery-rails'
 
 
 # To use Jbuilder templates for JSON
