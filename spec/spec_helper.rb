@@ -1,3 +1,6 @@
+#require 'simplecov'
+#SimpleCov.start 'rails'
+
 require 'rubygems'
 require 'spork'
 #uncomment the following line to use spork with the debugger
@@ -55,7 +58,6 @@ Spork.each_run do
 end
 
 require 'support/utilities.rb'
-
 
 # --- Instructions ---
 # Sort the contents of this file into a Spork.prefork and a Spork.each_run

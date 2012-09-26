@@ -20,8 +20,6 @@ group :development, :test do
   gem 'guard-spork', '0.3.2'
   gem 'spork', '0.9.0'
 
-#  gem 'simplecov', :require => false
-
   # To use debugger
   gem	'ruby-debug-base19', "0.11.26"
   gem 'ruby-debug19', :require => 'ruby-debug'
@@ -34,6 +32,7 @@ group :test do
   gem 'factory_girl_rails', '~> 4.0'
   gem 'cucumber-rails', '1.2.1', :require => false
   gem 'database_cleaner', '0.7.0'
+#  gem 'simplecov', :require => false
   
 #  gem 'launchy', '2.1.0'   # use with Capybara. save_and_open_page method
   gem 'rb-fsevent', '0.9.1', :require => false
